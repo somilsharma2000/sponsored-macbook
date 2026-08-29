@@ -91,7 +91,7 @@ section { padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
 .macbook-base { height: 24px; background: linear-gradient(180deg, #2a2a3a, #1a1a26); border-radius: 0 0 12px 12px; max-width: 700px; margin: 0 auto; border-bottom: 2px solid var(--border); }
 .position-slot { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 8px; text-align: center; transition: all 0.2s; cursor: pointer; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 72px; }
 .position-slot:hover { border-color: var(--primary); transform: scale(1.05); z-index: 5; }
-.position-slot.taken { opacity: 0.5; cursor: default; } .position-slot.taken:hover { transform: none; border-color: var(--border); }
+.position-slot.taken { opacity: 0.5; cursor: default; } .position-slot.held { opacity: 0.7; border-color: var(--gold); } .position-slot.held:hover { transform: none; } .slot-held { font-size: 11px; color: var(--gold); margin-top: 2px; font-weight: 700; } .position-slot.taken:hover { transform: none; border-color: var(--border); }
 .position-slot.crown { grid-column: 2 / 3; min-height: 100px; border-color: var(--gold); }
 .position-slot.crown .slot-label { font-size: 20px; color: var(--gold); }
 .position-slot .slot-label { font-size: 12px; font-weight: 700; letter-spacing: 0.5px; }
@@ -227,6 +227,7 @@ footer a { color: var(--text-muted); text-decoration: none; } footer a:hover { c
   <div class="hero-ctas">
     <a href="#positions" class="btn-primary">View Positions →</a>
     <a href="#story" class="btn-secondary">The Story</a>
+    <a href="sponsor-deck.html" class="btn-secondary" target="_blank">Sponsor Deck</a>
   </div>
   <div class="share-row">
     <button class="btn-share" onclick="shareCampaign('twitter')">Share on X</button>
@@ -343,7 +344,7 @@ footer a { color: var(--text-muted); text-decoration: none; } footer a:hover { c
 
 <footer>
   <p>The Sponsored MacBook — A 30-day public marketing experiment by Somil Sharma.</p>
-  <p style="margin-top: 8px; font-size: 13px;">100% refund guarantee · GST invoices · Razorpay secured · Public case study · <a href="https://github.com/somilsharma2000/sponsored-macbook">GitHub</a></p>
+  <p style="margin-top: 8px; font-size: 13px;">100% refund guarantee · GST invoices · Razorpay secured · Public case study · <a href="sponsor-deck.html" target="_blank">Sponsor Deck</a> · <a href="https://github.com/somilsharma2000/sponsored-macbook">GitHub</a></p>
 </footer>
 
 <div class="modal-overlay" id="sponsorModal">
@@ -366,6 +367,7 @@ footer a { color: var(--text-muted); text-decoration: none; } footer a:hover { c
         <div class="form-group"><label>Contact Email *</label><input type="email" name="contactEmail" required></div>
         <div class="form-group"><label>Contact Phone</label><input type="text" name="contactPhone"></div>
         <div class="form-group"><label>Website</label><input type="text" name="website" placeholder="https://"></div>
+        <div class="form-group"><label>Category (for exclusivity)</label><select name="category"><option value="">No category</option><option value="audio">Audio / Headphones</option><option value="fintech">Fintech / Payments</option><option value="d2c">D2C / E-commerce</option><option value="saas">SaaS / Software</option><option value="ai">AI / ML</option><option value="food">Food & Beverage</option><option value="fashion">Fashion / Apparel</option><option value="health">Health / Fitness</option><option value="education">Education / EdTech</option><option value="gaming">Gaming</option><option value="creator">Creator Economy</option><option value="logistics">Logistics / Delivery</option><option value="other">Other</option></select></div>
         <div class="form-group"><label>Logo URL (optional)</label><input type="text" name="logoUrl" placeholder="https://..."></div>
         <div class="form-group"><label>Message to founder (optional)</label><textarea name="founderMessage" rows="2" placeholder="Why are you interested?"></textarea></div>
         <button type="submit" class="modal-submit" id="modalSubmitBtn">Submit Application</button>
@@ -403,14 +405,16 @@ function renderCampaign(data) {
   document.getElementById('sponsorsCount').textContent = c.positionsTaken;
   document.getElementById('positionsTaken').textContent = c.positionsTaken;
   document.getElementById('progressPercent').textContent = c.progressPercent;
+  const pa = document.getElementById('pendingApps');
+  if (pa) pa.textContent = c.pendingApplications || 0;
   document.getElementById('fundingFill').style.width = c.progressPercent + '%';
   document.getElementById('heroBadgeText').textContent = `Live Campaign · ${formatINR(c.raised)} of ${formatINR(c.target)} raised · ${c.positionsAvailable} positions left`;
 
   const lid = document.getElementById('macbookLid'); lid.innerHTML = '';
   data.positions.forEach(p => {
     const slot = document.createElement('div');
-    slot.className = `position-slot ${p.tier} ${!p.isAvailable ? 'taken' : ''}`;
-    slot.innerHTML = `<div class="slot-label">${p.displayLabel}</div>${p.isAvailable ? `<div class="slot-price">${formatINR(p.price)}</div>` : `<div class="slot-taken">TAKEN</div>`}`;
+    slot.className = `position-slot ${p.tier} ${p.positionState === 'sold' ? 'taken' : (p.positionState === 'hold' ? 'held' : '')}`;
+    slot.innerHTML = `<div class="slot-label">${p.displayLabel}</div>${p.positionState === 'available' ? `<div class="slot-price">${formatINR(p.price)}</div>` : (p.positionState === 'hold' ? `<div class="slot-held">ON HOLD</div>` : `<div class="slot-taken">TAKEN</div>`)}`;
     if (p.isAvailable) slot.onclick = () => openSponsorModal(p);
     lid.appendChild(slot);
   });
@@ -424,7 +428,7 @@ function renderCampaign(data) {
   const pricingGrid = document.getElementById('pricingGrid'); pricingGrid.innerHTML = '';
   tiers.forEach(t => {
     const tp = data.positions.filter(p => p.tier === t.tier);
-    const avail = tp.filter(p => p.isAvailable).length;
+    const avail = tp.filter(p => p.positionState === 'available' || (!p.positionState && p.isAvailable)).length;
     const card = document.createElement('div');
     card.className = `pricing-card ${t.tier}`;
     card.innerHTML = `<div class="pricing-tier">${t.name}</div><div class="pricing-price">${formatINR(t.price)} <span>/ position</span></div><div class="pricing-slots">${avail} of ${tp.length} available</div><ul class="pricing-features">${t.features.map(f => `<li>${f}</li>`).join('')}</ul><button class="pricing-btn ${avail > 0 ? 'available' : 'taken'}" ${avail > 0 ? `onclick="claimFirstAvailable('${t.tier}')"` : 'disabled'}>${avail > 0 ? 'Claim Position' : 'All Taken'}</button>`;
@@ -474,7 +478,7 @@ function updateCountdown() {
 
 function openSponsorModal(p) { selectedPosition = p; document.getElementById('modalPositionLabel').textContent = p.displayLabel; document.getElementById('modalPositionDesc').textContent = p.description || ''; document.getElementById('modalPositionPrice').textContent = formatINR(p.price); document.getElementById('sponsorModal').classList.add('active'); }
 function closeModal() { document.getElementById('sponsorModal').classList.remove('active'); selectedPosition = null; }
-function claimFirstAvailable(t) { const a = campaignData?.positions?.find(p => p.tier === t && p.isAvailable); if (a) openSponsorModal(a); }
+function claimFirstAvailable(t) { const a = campaignData?.positions?.find(p => p.tier === t && (p.positionState === 'available' || (!p.positionState && p.isAvailable))); if (a) openSponsorModal(a); }
 
 async function submitApplication(e) {
   e.preventDefault();
@@ -484,7 +488,7 @@ async function submitApplication(e) {
   btn.disabled = true;
   btn.innerHTML = '<span class="loading"></span> Submitting...';
   const fd = new FormData(e.target);
-  const body = { brandName:fd.get('brandName'), contactName:fd.get('contactName'), contactEmail:fd.get('contactEmail'), contactPhone:fd.get('contactPhone'), website:fd.get('website'), logoUrl:fd.get('logoUrl'), founderMessage:fd.get('founderMessage'), positionNumber:selectedPosition.positionNumber, tier:selectedPosition.tier, amount:selectedPosition.price };
+  const body = { brandName:fd.get('brandName'), contactName:fd.get('contactName'), contactEmail:fd.get('contactEmail'), contactPhone:fd.get('contactPhone'), website:fd.get('website'), logoUrl:fd.get('logoUrl'), category:fd.get('category'), founderMessage:fd.get('founderMessage'), positionNumber:selectedPosition.positionNumber, tier:selectedPosition.tier, amount:selectedPosition.price };
   try {
     const res = await fetch(`${API_BASE}/submitSponsorApplication`, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body) });
     const data = await res.json();
