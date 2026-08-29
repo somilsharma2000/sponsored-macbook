@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Sponsored MacBook — A 30-Day Public Experiment</title>
+<meta name="description" content="A 30-day public experiment: Can 20 brands fund one MacBook through sponsorship alone? Real tracking. Refund guarantee. Published case study.">
+<meta name="keywords" content="sponsored macbook, brand sponsorship, marketing experiment, india startup, macbook pro, qr tracking">
+<meta name="author" content="Somil Sharma">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Sponsored MacBook — A 30-Day Public Experiment">
+<meta property="og:description" content="Can 20 brands fund one MacBook through sponsorship? Real tracking. Refund guarantee. Published case study.">
+<meta property="og:url" content="https://zevio-7e7f14d1.base44.app/files/mp/public/6a925ce0591b907d7e7f14d1/8c04060eb_campaign-website-v2.html">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Sponsored MacBook — A 30-Day Public Experiment">
+<meta name="twitter:description" content="Can 20 brands fund one MacBook? Real tracking. Refund guarantee.">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+
+<style>
+:root {
+  --bg: #0a0a0f; --surface: #12121a; --surface-2: #1a1a26; --border: #2a2a3a;
+  --text: #f5f5f7; --text-muted: #8888a0; --primary: #6366f1; --primary-glow: rgba(99,102,241,0.4);
+  --gold: #fbbf24; --green: #22c55e; --red: #ef4444; --crown: #fbbf24; --founding: #a78bfa; --standard: #60a5fa; --community: #34d399;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; overflow-x: hidden; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,15,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { font-weight: 800; font-size: 18px; letter-spacing: -0.5px; } .nav-logo span { color: var(--primary); }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { color: var(--text-muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-cta { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s; }
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px var(--primary-glow); }
+.hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 24px 40px; text-align: center; position: relative; }
+.hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at center top, var(--primary-glow), transparent 60%); pointer-events: none; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--border); padding: 6px 16px; border-radius: 100px; font-size: 13px; color: var(--text-muted); margin-bottom: 24px; position: relative; }
+.hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+.hero h1 { font-size: clamp(36px, 6vw, 68px); font-weight: 900; letter-spacing: -2px; line-height: 1.05; max-width: 800px; margin-bottom: 20px; position: relative; }
+.hero h1 .highlight { background: linear-gradient(135deg, var(--primary), var(--founding)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { font-size: clamp(16px, 2.5vw, 20px); color: var(--text-muted); max-width: 600px; margin-bottom: 20px; position: relative; }
+.hero-bet { display: inline-flex; gap: 8px; align-items: center; background: var(--surface); border: 1px solid var(--gold); border-radius: 12px; padding: 8px 20px; margin-bottom: 32px; font-size: 15px; position: relative; }
+.countdown { display: flex; gap: 12px; justify-content: center; margin-bottom: 32px; position: relative; }
+.countdown-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; text-align: center; min-width: 70px; }
+.countdown-num { font-size: 28px; font-weight: 900; }
+.countdown-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+.trust-badges { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; position: relative; }
+.trust-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; font-size: 13px; color: var(--text-muted); }
+.trust-badge .icon { color: var(--green); font-size: 16px; }
+.funding-section { max-width: 700px; width: 100%; position: relative; }
+.funding-bar-container { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; margin-bottom: 24px; }
+.funding-amounts { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
+.funding-raised { font-size: 32px; font-weight: 800; }
+.funding-raised span { font-size: 16px; color: var(--text-muted); font-weight: 500; }
+.funding-target { font-size: 14px; color: var(--text-muted); }
+.funding-bar { height: 12px; background: var(--surface-2); border-radius: 100px; overflow: hidden; }
+.funding-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--founding)); border-radius: 100px; transition: width 1s ease; width: 0%; }
+.funding-meta { display: flex; justify-content: space-between; margin-top: 16px; font-size: 13px; color: var(--text-muted); }
+.funding-meta span strong { color: var(--text); }
+.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+.btn-primary { background: var(--primary); color: white; border: none; padding: 14px 28px; border-radius: 10px; font-weight: 700; font-size: 16px; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px var(--primary-glow); }
+.btn-secondary { background: var(--surface); color: var(--text); border: 1px solid var(--border); padding: 14px 28px; border-radius: 10px; font-weight: 600; font-size: 16px; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+.btn-secondary:hover { background: var(--surface-2); border-color: var(--text-muted); }
+.btn-share { background: var(--surface); color: var(--text-muted); border: 1px solid var(--border); padding: 10px 16px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: all 0.2s; }
+.btn-share:hover { color: var(--text); border-color: var(--text-muted); }
+section { padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
+.section-label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--primary); margin-bottom: 12px; }
+.section-title { font-size: clamp(28px, 4vw, 42px); font-weight: 800; letter-spacing: -1px; margin-bottom: 16px; }
+.section-subtitle { font-size: 17px; color: var(--text-muted); max-width: 600px; margin-bottom: 48px; }
+.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.story-text { font-size: 17px; color: var(--text-muted); }
+.story-text p { margin-bottom: 20px; } .story-text strong { color: var(--text); }
+.story-visual { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
+.story-visual h3 { font-size: 16px; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+.story-visual-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.story-visual-item:last-child { border-bottom: none; }
+.story-visual-num { font-size: 24px; font-weight: 800; color: var(--primary); min-width: 60px; }
+.story-visual-text { font-size: 14px; color: var(--text-muted); }
+.macbook-section { text-align: center; }
+.macbook-wrap { max-width: 700px; margin: 0 auto; }
+.macbook-lid { background: linear-gradient(145deg, #1a1a2e, #0f0f1a); border: 2px solid var(--border); border-radius: 16px 16px 4px 4px; padding: 40px 32px; position: relative; min-height: 380px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; box-shadow: 0 24px 80px rgba(0,0,0,0.5); }
+.macbook-lid::before { content: ''; position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 40px; height: 4px; background: var(--surface-2); border-radius: 100px; }
+.macbook-hinge { height: 8px; background: #0a0a14; border: 2px solid var(--border); border-top: none; border-radius: 0 0 8px 8px; max-width: 700px; margin: 0 auto; }
+.macbook-base { height: 24px; background: linear-gradient(180deg, #2a2a3a, #1a1a26); border-radius: 0 0 12px 12px; max-width: 700px; margin: 0 auto; border-bottom: 2px solid var(--border); }
+.position-slot { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 8px; text-align: center; transition: all 0.2s; cursor: pointer; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 72px; }
+.position-slot:hover { border-color: var(--primary); transform: scale(1.05); z-index: 5; }
+.position-slot.taken { opacity: 0.5; cursor: default; } .position-slot.taken:hover { transform: none; border-color: var(--border); }
+.position-slot.crown { grid-column: 2 / 3; min-height: 100px; border-color: var(--gold); }
+.position-slot.crown .slot-label { font-size: 20px; color: var(--gold); }
+.position-slot .slot-label { font-size: 12px; font-weight: 700; letter-spacing: 0.5px; }
+.position-slot .slot-price { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+.position-slot .slot-taken { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.position-slot.crown::after { content: '👑'; position: absolute; top: 6px; right: 8px; font-size: 14px; }
+.tier-legend { display: flex; gap: 24px; justify-content: center; margin-top: 32px; flex-wrap: wrap; }
+.tier-legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); }
+.tier-dot { width: 12px; height: 12px; border-radius: 4px; }
+.tier-dot.crown { background: var(--crown); } .tier-dot.founding { background: var(--founding); } .tier-dot.standard { background: var(--standard); } .tier-dot.community { background: var(--community); }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.pricing-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px; transition: all 0.3s; position: relative; }
+.pricing-card:hover { border-color: var(--primary); transform: translateY(-4px); }
+.pricing-card.crown { border-color: var(--gold); }
+.pricing-card.crown::before { content: 'MOST PREMIUM'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #000; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 100px; letter-spacing: 1px; }
+.pricing-card.founding { border-color: var(--founding); }
+.pricing-tier { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }
+.pricing-card.crown .pricing-tier { color: var(--gold); } .pricing-card.founding .pricing-tier { color: var(--founding); } .pricing-card.standard .pricing-tier { color: var(--standard); } .pricing-card.community .pricing-tier { color: var(--community); }
+.pricing-price { font-size: 36px; font-weight: 900; margin-bottom: 4px; } .pricing-price span { font-size: 16px; font-weight: 500; color: var(--text-muted); }
+.pricing-slots { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+.pricing-features { list-style: none; }
+.pricing-features li { font-size: 14px; color: var(--text-muted); padding: 8px 0; padding-left: 24px; position: relative; }
+.pricing-features li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+.pricing-btn { width: 100%; margin-top: 20px; padding: 12px; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer; border: none; transition: all 0.2s; }
+.pricing-btn.available { background: var(--primary); color: white; }
+.pricing-btn.available:hover { transform: translateY(-1px); box-shadow: 0 8px 24px var(--primary-glow); }
+.pricing-btn.taken { background: var(--surface-2); color: var(--text-muted); cursor: not-allowed; border: 1px solid var(--border); }
+.leaderboard { display: flex; flex-direction: column; gap: 12px; max-width: 700px; margin: 0 auto; }
+.leaderboard-item { display: flex; align-items: center; gap: 16px; padding: 16px 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; transition: all 0.2s; }
+.leaderboard-item:hover { border-color: var(--primary); }
+.leaderboard-rank { font-size: 24px; font-weight: 900; min-width: 40px; text-align: center; }
+.leaderboard-rank.gold { color: var(--gold); } .leaderboard-rank.silver { color: #c0c0c0; } .leaderboard-rank.bronze { color: #cd7f32; }
+.leaderboard-info { flex: 1; }
+.leaderboard-brand { font-weight: 700; font-size: 16px; }
+.leaderboard-position { font-size: 13px; color: var(--text-muted); }
+.leaderboard-amount { font-size: 18px; font-weight: 800; color: var(--green); }
+.leaderboard-empty { text-align: center; color: var(--text-muted); padding: 40px; font-size: 15px; }
+.nominate-section { text-align: center; }
+.nominate-form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; text-align: left; }
+.nominate-form input, .nominate-form textarea { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; color: var(--text); font-size: 15px; font-family: inherit; }
+.nominate-form input:focus, .nominate-form textarea:focus { outline: none; border-color: var(--primary); }
+.nominate-form textarea { min-height: 80px; resize: vertical; }
+.nominate-list { max-width: 600px; margin: 32px auto 0; }
+.nominate-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; }
+.nominate-brand { font-weight: 600; font-size: 15px; }
+.nominate-votes { font-size: 14px; color: var(--primary); font-weight: 700; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; }
+.stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 900; }
+.stat-label { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+.faq-list { max-width: 700px; margin: 0 auto; }
+.faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
+.faq-q { padding: 20px 24px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+.faq-q .arrow { transition: transform 0.2s; color: var(--text-muted); }
+.faq-item.open .arrow { transform: rotate(180deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.faq-item.open .faq-a { max-height: 500px; }
+.faq-a-inner { padding: 0 24px 20px; color: var(--text-muted); font-size: 15px; }
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); z-index: 200; display: none; align-items: center; justify-content: center; padding: 24px; }
+.modal-overlay.active { display: flex; }
+.modal { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; max-width: 540px; width: 100%; max-height: 90vh; overflow-y: auto; }
+.modal-header { padding: 24px 24px 0; display: flex; justify-content: space-between; align-items: center; }
+.modal-header h3 { font-size: 20px; font-weight: 800; }
+.modal-close { background: var(--surface-2); border: 1px solid var(--border); color: var(--text-muted); width: 32px; height: 32px; border-radius: 8px; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+.modal-body { padding: 24px; }
+.modal-body .form-group { margin-bottom: 16px; }
+.modal-body label { display: block; font-size: 13px; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
+.modal-body input, .modal-body textarea, .modal-body select { width: 100%; background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; color: var(--text); font-size: 15px; font-family: inherit; }
+.modal-body input:focus, .modal-body textarea:focus, .modal-body select:focus { outline: none; border-color: var(--primary); }
+.modal-position-info { background: var(--surface-2); border-radius: 10px; padding: 16px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+.modal-position-label { font-weight: 700; font-size: 16px; }
+.modal-position-price { font-size: 24px; font-weight: 900; color: var(--green); }
+.modal-submit { width: 100%; background: var(--primary); color: white; border: none; padding: 14px; border-radius: 10px; font-weight: 700; font-size: 16px; cursor: pointer; transition: all 0.2s; }
+.modal-submit:hover { transform: translateY(-1px); box-shadow: 0 8px 24px var(--primary-glow); }
+.modal-submit:disabled { opacity: 0.5; cursor: wait; }
+.modal-success { text-align: center; padding: 20px; }
+.modal-success .check { font-size: 48px; margin-bottom: 16px; }
+.modal-success h4 { font-size: 20px; font-weight: 800; margin-bottom: 12px; }
+.modal-success p { color: var(--text-muted); margin-bottom: 8px; font-size: 15px; }
+.toast { position: fixed; bottom: 24px; right: 24px; background: var(--surface); border: 1px solid var(--primary); border-radius: 12px; padding: 16px 24px; z-index: 300; transform: translateY(100px); opacity: 0; transition: all 0.3s; }
+.toast.show { transform: translateY(0); opacity: 1; }
+.loading { display: inline-block; width: 20px; height: 20px; border: 2px solid var(--surface-2); border-top-color: var(--primary); border-radius: 50%; animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
+footer a { color: var(--text-muted); text-decoration: none; } footer a:hover { color: var(--text); }
+.refund-banner { background: linear-gradient(135deg, rgba(34,197,94,0.1), rgba(99,102,241,0.1)); border: 1px solid rgba(34,197,94,0.3); border-radius: 12px; padding: 16px 24px; margin: 0 auto 32px; max-width: 600px; text-align: center; font-size: 14px; }
+.refund-banner strong { color: var(--green); }
+.share-row { display: flex; gap: 12px; justify-content: center; margin-top: 24px; }
+@media (max-width: 768px) { .nav-links { display: none; } .story-grid { grid-template-columns: 1fr; } .macbook-lid { padding: 30px 16px; min-height: 320px; } .countdown-item { min-width: 60px; padding: 10px 14px; } .countdown-num { font-size: 22px; } }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">The<span>Sponsored</span>MacBook</div>
+  <div class="nav-links">
+    <a href="#story">Story</a> <a href="#positions">Positions</a> <a href="#pricing">Pricing</a>
+    <a href="#leaderboard">Leaderboard</a> <a href="#nominate">Nominate</a> <a href="#faq">FAQ</a>
+  </div>
+  <button class="nav-cta" onclick="scrollToPositions()">Sponsor Now</button>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge"><span class="dot"></span> <span id="heroBadgeText">Live Campaign · Day 1 of 30</span></div>
+  <h1>I publicly bet <span class="highlight">20 brands</span> will fund my MacBook in 30 days.</h1>
+  <p>If I lose, I publish a detailed case study of why it failed. If I win, every sponsor is featured in a marketing case study. Real brands. Real money. Refund guarantee.</p>
+  <div class="hero-bet"><span style="font-size:20px;">🎯</span> The Public Bet: ₹0 → MacBook in 30 days</div>
+  <div class="countdown" id="countdown">
+    <div class="countdown-item"><div class="countdown-num" id="cdDays">30</div><div class="countdown-label">Days</div></div>
+    <div class="countdown-item"><div class="countdown-num" id="cdHours">00</div><div class="countdown-label">Hours</div></div>
+    <div class="countdown-item"><div class="countdown-num" id="cdMins">00</div><div class="countdown-label">Mins</div></div>
+    <div class="countdown-item"><div class="countdown-num" id="cdSecs">00</div><div class="countdown-label">Secs</div></div>
+  </div>
+  <div class="trust-badges">
+    <div class="trust-badge"><span class="icon">✓</span> 100% Refund Guarantee</div>
+    <div class="trust-badge"><span class="icon">✓</span> GST Invoices</div>
+    <div class="trust-badge"><span class="icon">✓</span> Razorpay Secured</div>
+    <div class="trust-badge"><span class="icon">✓</span> Live QR Tracking</div>
+  </div>
+  <div class="funding-section">
+    <div class="funding-bar-container">
+      <div class="funding-amounts">
+        <div class="funding-raised">₹<span id="raisedAmount">0</span> <span>raised</span></div>
+        <div class="funding-target">Target: ₹6,00,000</div>
+      </div>
+      <div class="funding-bar"><div class="funding-fill" id="fundingFill"></div></div>
+      <div class="funding-meta">
+        <span><strong id="sponsorsCount">0</strong> sponsors</span>
+        <span><strong id="positionsTaken">0</strong>/20 positions taken</span>
+        <span><strong id="progressPercent">0</strong>% funded</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-ctas">
+    <a href="#positions" class="btn-primary">View Positions →</a>
+    <a href="#story" class="btn-secondary">The Story</a>
+  </div>
+  <div class="share-row">
+    <button class="btn-share" onclick="shareCampaign('twitter')">Share on X</button>
+    <button class="btn-share" onclick="shareCampaign('linkedin')">Share on LinkedIn</button>
+    <button class="btn-share" onclick="shareCampaign('copy')">Copy Link</button>
+  </div>
+</div>
+
+<div class="refund-banner" style="max-width:800px; margin: 0 auto; padding: 16px 24px;">
+  <strong>100% REFUND GUARANTEE:</strong> If the campaign doesn't reach ₹6L in 30 days, every sponsor gets a full refund. No questions asked. Every rupee is tracked publicly. This is a legitimate marketing experiment — not a donation drive.
+</div>
+
+<section id="story">
+  <div class="section-label">The Experiment</div>
+  <h2 class="section-title">What is this?</h2>
+  <p class="section-subtitle">This isn't a giveaway. This isn't crowdfunding. This is a public marketing experiment.</p>
+  <div class="story-grid">
+    <div class="story-text">
+      <p><strong>The premise:</strong> I want a MacBook Pro. I have ₹0 to spend. So I'm running a 30-day public experiment: can 20 brands fund it entirely through sponsorship?</p>
+      <p><strong>20 positions.</strong> 1 Crown (₹1L). 4 Founding (₹50K). 10 Standard (₹25K). 5 Community (₹10K). Each position gets physical space on the MacBook lid, a unique QR code, a dedicated landing page, and full tracking.</p>
+      <p><strong>The public bet:</strong> If I don't hit ₹6L in 30 days, every sponsor gets a full refund AND I publish a detailed case study of why it failed. The failure is part of the story.</p>
+      <p><strong>Why would a brand pay?</strong> This isn't just a sticker — it's a PR story, a content asset, a case study, and a social media moment. "We sponsored a MacBook" is more interesting than "we ran another Meta ad." And at ₹10K-₹50K, it costs less than one week of Meta ads.</p>
+      <p><strong>What every sponsor gets:</strong> Physical brand placement, unique QR code with live tracking, dedicated profile page, social content, and inclusion in a published 12-month case study.</p>
+    </div>
+    <div class="story-visual">
+      <h3>Transparent Cost Breakdown</h3>
+      <div class="story-visual-item"><span class="story-visual-num">₹4L</span><span class="story-visual-text">MacBook Pro 16" M5 Max (the target)</span></div>
+      <div class="story-visual-item"><span class="story-visual-num">₹40K</span><span class="story-visual-text">AppleCare+ (3-year protection)</span></div>
+      <div class="story-visual-item"><span class="story-visual-num">₹15K</span><span class="story-visual-text">Custom premium vinyl skin design + printing</span></div>
+      <div class="story-visual-item"><span class="story-visual-num">₹12K</span><span class="story-visual-text">Payment gateway fees (~2% via Razorpay)</span></div>
+      <div class="story-visual-item"><span class="story-visual-num">₹15K</span><span class="story-visual-text">Website, domain, legal/CA costs</span></div>
+      <div class="story-visual-item"><span class="story-visual-num">₹6L</span><span class="story-visual-text">Total target (includes contingency)</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="positions" class="macbook-section">
+  <div class="section-label">The MacBook</div>
+  <h2 class="section-title">20 positions. 1 MacBook.</h2>
+  <p class="section-subtitle">Each position is a physical spot on the MacBook lid. Click to claim.</p>
+  <div class="macbook-wrap">
+    <div class="macbook-lid" id="macbookLid"></div>
+    <div class="macbook-hinge"></div>
+    <div class="macbook-base"></div>
+  </div>
+  <div class="tier-legend">
+    <div class="tier-legend-item"><span class="tier-dot crown"></span> Crown (₹1L) — 1 position</div>
+    <div class="tier-legend-item"><span class="tier-dot founding"></span> Founding (₹50K) — 4 positions</div>
+    <div class="tier-legend-item"><span class="tier-dot standard"></span> Standard (₹25K) — 10 positions</div>
+    <div class="tier-legend-item"><span class="tier-dot community"></span> Community (₹10K) — 5 positions</div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="section-label">Sponsor Packages</div>
+  <h2 class="section-title">What each tier gets</h2>
+  <p class="section-subtitle">Transparent pricing. No hidden costs. Every sponsor gets tracking. First 3 sponsors get Founding status bonus.</p>
+  <div class="pricing-grid" id="pricingGrid"></div>
+</section>
+
+<section id="leaderboard">
+  <div class="section-label">Live Rankings</div>
+  <h2 class="section-title">Sponsor Leaderboard</h2>
+  <p class="section-subtitle">Real sponsors. Real money. Updated in real-time. The first sponsors are the bravest.</p>
+  <div class="leaderboard" id="leaderboard">
+    <div class="leaderboard-empty">No sponsors yet. The first sponsor gets Founding bonus + 50% extra social content. Be the first. 🚀</div>
+  </div>
+</section>
+
+<section id="nominate" class="nominate-section">
+  <div class="section-label">Community</div>
+  <h2 class="section-title">Who should sponsor?</h2>
+  <p class="section-subtitle">Nominate a brand. The most-nominated brands get publicly listed — that's social pressure to participate.</p>
+  <form class="nominate-form" id="nominateForm" onsubmit="submitNomination(event)">
+    <input type="text" name="brandName" placeholder="Brand name *" required>
+    <input type="text" name="brandWebsite" placeholder="Brand website (optional)">
+    <input type="text" name="nominatorName" placeholder="Your name (optional)">
+    <input type="email" name="nominatorEmail" placeholder="Your email (optional)">
+    <textarea name="reason" placeholder="Why should this brand sponsor? (optional)"></textarea>
+    <button type="submit" class="btn-primary" style="width: 100%;">Nominate Brand</button>
+  </form>
+  <div class="nominate-list" id="nominateList"></div>
+</section>
+
+<section id="stats">
+  <div class="section-label">Transparency</div>
+  <h2 class="section-title">Campaign Analytics</h2>
+  <p class="section-subtitle">Every interaction tracked. Every metric public. This is an open experiment.</p>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-value" id="statPageViews">0</div><div class="stat-label">Page Views</div></div>
+    <div class="stat-card"><div class="stat-value" id="statSponsors">0</div><div class="stat-label">Sponsors</div></div>
+    <div class="stat-card"><div class="stat-value" id="statQRScans">0</div><div class="stat-label">QR Scans</div></div>
+    <div class="stat-card"><div class="stat-value" id="statShares">0</div><div class="stat-label">Shares</div></div>
+    <div class="stat-card"><div class="stat-value" id="statNominations">0</div><div class="stat-label">Nominations</div></div>
+    <div class="stat-card"><div class="stat-value" id="statApplications">0</div><div class="stat-label">Applications</div></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="section-label">Questions</div>
+  <h2 class="section-title">Frequently Asked</h2>
+  <p class="section-subtitle">Every objection addressed honestly. No spin.</p>
+  <div class="faq-list">
+    <div class="faq-item"><div class="faq-q" onclick="toggleFAQ(this)">Why should I sponsor a MacBook? <span class="arrow">▼</span></div><div class="faq-a"><div class="faq-a-inner">You're not buying a sticker — you're buying into a public marketing experiment that generates PR, content, and social attention. "We sponsored a MacBook" is a story people share. It costs less than one week of Meta ads. You get tracked QR traffic, a dedicated profile, social content, and a 12-month case study with your brand in it. The real value is the story, not the sticker.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFAQ(this)">How many people will see this? <span class="arrow">▼</span></div><div class="faq-a"><div class="faq-a-inner">We don't guarantee views — that would be dishonest. What we guarantee: physical placement on a MacBook that travels to co-working spaces, tech meetups, and cafés. A unique QR code tracked in real-time. Social content featuring your brand. A public campaign page. The viral potential is real but not guaranteed. What IS guaranteed is the infrastructure, the story, and the case study.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFAQ(this)">What happens if you don't raise enough? <span class="arrow">▼</span></div><div class="faq-a"><div class="faq-a-inner"><strong>100% refund guarantee.</strong> If we don't hit ₹6L in 30 days, every sponsor gets a full refund — no questions asked. Alternatively, you can roll forward: your position is locked in for Campaign #2 at the same price. We're transparent about progress at all times. No money is spent until the MacBook is purchased.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFAQ(this)">Is this legal / a scam? <span class="arrow">▼</span></div><div class="faq-a"><div class="faq-a-inner">This is a legitimate commercial sponsorship. We issue GST invoices. Payments are processed via Razorpay (RBI-authorized payment aggregator). We use a registered business entity. Sponsor agreements are available for review. We comply with ASCI guidelines. Every transaction is publicly tracked. Full refund guarantee.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFAQ(this)">What's the ROI? <span class="arrow">▼</span></div><div class="faq-a"><div class="faq-a-inner">We don't promise ROI — that would be dishonest. What we deliver: tracked QR scans, tracked landing page visitors, tracked outbound clicks, social content with your brand, a public case study, and PR value of being part of a novel experiment. For ₹10K-₹50K, the question is: what else could this money buy? A week of Meta ads with no lasting asset. This is different — it's a story.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFAQ(this)">Can I choose my position? <span class="arrow">▼</span></div><div class="faq-a"><div class="faq-a-inner">Yes — first come, first served. The Crown (₹1L) is the center of the lid. Founding (₹50K) surround the Crown. Standard (₹25K) fill the outer lid. Community (₹10K) are smaller spots for startups.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFAQ(this)">How does payment work? <span class="arrow">▼</span></div><div class="faq-a"><div class="faq-a-inner">After you apply, we schedule a 15-minute call. Then we send a formal invoice via Razorpay — pay via UPI, cards, or net banking. You receive a GST invoice. No money is collected informally.</div></div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFAQ(this)">Why should I be the first sponsor? <span class="arrow">▼</span></div><div class="faq-a"><div class="faq-a-inner">The first 3 sponsors get permanent Founding status — a badge on all campaign materials, bonus social content (2x posts), priority in the case study, and first right of refusal for Campaign #2. Being first is a risk, but it comes with permanent rewards.</div></div></div>
+  </div>
+</section>
+
+<footer>
+  <p>The Sponsored MacBook — A 30-day public marketing experiment by Somil Sharma.</p>
+  <p style="margin-top: 8px; font-size: 13px;">100% refund guarantee · GST invoices · Razorpay secured · Public case study · <a href="https://github.com/somilsharma2000/sponsored-macbook">GitHub</a></p>
+</footer>
+
+<div class="modal-overlay" id="sponsorModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Claim Your Position</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody">
+      <div class="modal-position-info">
+        <div>
+          <div class="modal-position-label" id="modalPositionLabel">CROWN</div>
+          <div style="font-size: 13px; color: var(--text-muted);" id="modalPositionDesc">The center of the MacBook lid</div>
+        </div>
+        <div class="modal-position-price" id="modalPositionPrice">₹1,00,000</div>
+      </div>
+      <form onsubmit="submitApplication(event)">
+        <div class="form-group"><label>Brand Name *</label><input type="text" name="brandName" required></div>
+        <div class="form-group"><label>Contact Name *</label><input type="text" name="contactName" required></div>
+        <div class="form-group"><label>Contact Email *</label><input type="email" name="contactEmail" required></div>
+        <div class="form-group"><label>Contact Phone</label><input type="text" name="contactPhone"></div>
+        <div class="form-group"><label>Website</label><input type="text" name="website" placeholder="https://"></div>
+        <div class="form-group"><label>Logo URL (optional)</label><input type="text" name="logoUrl" placeholder="https://..."></div>
+        <div class="form-group"><label>Message to founder (optional)</label><textarea name="founderMessage" rows="2" placeholder="Why are you interested?"></textarea></div>
+        <button type="submit" class="modal-submit" id="modalSubmitBtn">Submit Application</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const API_BASE = 'https://zevio-7e7f14d1.base44.app/functions';
+const CAMPAIGN_END = new Date('2026-09-28T23:59:59+05:30').getTime();
+let campaignData = null, selectedPosition = null, isLoading = false;
+
+function formatINR(a) { return '₹' + a.toLocaleString('en-IN'); }
+
+async function loadCampaign() {
+  try {
+    const res = await fetch(`${API_BASE}/getCampaignStats`);
+    if (!res.ok) throw new Error('API error');
+    const data = await res.json();
+    if (data.error) throw new Error(data.error);
+    campaignData = data;
+    renderCampaign(data);
+  } catch (e) {
+    console.error('Failed to load campaign:', e);
+    showToast('Failed to load campaign data. Please refresh.');
+  }
+}
+
+function renderCampaign(data) {
+  const c = data.campaign;
+  document.getElementById('raisedAmount').textContent = c.raised.toLocaleString('en-IN');
+  document.getElementById('sponsorsCount').textContent = c.positionsTaken;
+  document.getElementById('positionsTaken').textContent = c.positionsTaken;
+  document.getElementById('progressPercent').textContent = c.progressPercent;
+  document.getElementById('fundingFill').style.width = c.progressPercent + '%';
+  document.getElementById('heroBadgeText').textContent = `Live Campaign · ${formatINR(c.raised)} of ${formatINR(c.target)} raised · ${c.positionsAvailable} positions left`;
+
+  const lid = document.getElementById('macbookLid'); lid.innerHTML = '';
+  data.positions.forEach(p => {
+    const slot = document.createElement('div');
+    slot.className = `position-slot ${p.tier} ${!p.isAvailable ? 'taken' : ''}`;
+    slot.innerHTML = `<div class="slot-label">${p.displayLabel}</div>${p.isAvailable ? `<div class="slot-price">${formatINR(p.price)}</div>` : `<div class="slot-taken">TAKEN</div>`}`;
+    if (p.isAvailable) slot.onclick = () => openSponsorModal(p);
+    lid.appendChild(slot);
+  });
+
+  const tiers = [
+    { tier:'crown', name:'Crown Sponsor', price:100000, slots:'1 position', features:['Center of MacBook lid (most visible spot)','Unique QR code with live tracking','Dedicated landing page','Social content (X, LinkedIn, Instagram)','Sponsor profile with analytics dashboard','PR inclusion in campaign coverage','Crown badge on all materials','First right of refusal for Campaign #2'] },
+    { tier:'founding', name:'Founding Sponsor', price:50000, slots:'4 positions', features:['Premium position on MacBook lid','Unique QR code with live tracking','Dedicated landing page','Social content (X, LinkedIn)','Sponsor profile with analytics','Founding sponsor badge','PR inclusion','Bonus: 2x social posts'] },
+    { tier:'standard', name:'Standard Sponsor', price:25000, slots:'10 positions', features:['Position on MacBook lid','Unique QR code with tracking','Sponsor profile page','Social mention','Campaign analytics access'] },
+    { tier:'community', name:'Community Sponsor', price:10000, slots:'5 positions', features:['Position on MacBook lid','QR code with tracking','Sponsor listing','Social mention','Perfect for startups & small brands'] }
+  ];
+  const pricingGrid = document.getElementById('pricingGrid'); pricingGrid.innerHTML = '';
+  tiers.forEach(t => {
+    const tp = data.positions.filter(p => p.tier === t.tier);
+    const avail = tp.filter(p => p.isAvailable).length;
+    const card = document.createElement('div');
+    card.className = `pricing-card ${t.tier}`;
+    card.innerHTML = `<div class="pricing-tier">${t.name}</div><div class="pricing-price">${formatINR(t.price)} <span>/ position</span></div><div class="pricing-slots">${avail} of ${tp.length} available</div><ul class="pricing-features">${t.features.map(f => `<li>${f}</li>`).join('')}</ul><button class="pricing-btn ${avail > 0 ? 'available' : 'taken'}" ${avail > 0 ? `onclick="claimFirstAvailable('${t.tier}')"` : 'disabled'}>${avail > 0 ? 'Claim Position' : 'All Taken'}</button>`;
+    pricingGrid.appendChild(card);
+  });
+
+  const lb = document.getElementById('leaderboard');
+  if (data.leaderboard.length === 0) {
+    lb.innerHTML = '<div class="leaderboard-empty">No sponsors yet. The first sponsor gets Founding bonus + 50% extra social content. Be the first. 🚀</div>';
+  } else {
+    lb.innerHTML = '';
+    data.leaderboard.forEach((s, i) => {
+      const rc = i === 0 ? 'gold' : i === 1 ? 'silver' : i === 2 ? 'bronze' : '';
+      const medal = i < 3 ? ['🥇','🥈','🥉'][i] : (i + 1);
+      lb.innerHTML += `<div class="leaderboard-item"><div class="leaderboard-rank ${rc}">${medal}</div><div class="leaderboard-info"><div class="leaderboard-brand">${s.brandName}</div><div class="leaderboard-position">${s.position} · ${s.tier}</div></div><div class="leaderboard-amount">${formatINR(s.amount)}</div></div>`;
+    });
+  }
+
+  const nl = document.getElementById('nominateList');
+  if (data.topNominations.length === 0) {
+    nl.innerHTML = '<p style="color: var(--text-muted); text-align: center; margin-top: 24px;">No nominations yet. Be the first to suggest a brand.</p>';
+  } else {
+    nl.innerHTML = '<h3 style="margin-bottom: 16px; font-size: 16px;">Most Requested Brands</h3>';
+    data.topNominations.forEach(n => {
+      nl.innerHTML += `<div class="nominate-item"><div class="nominate-brand">${n.brandName}</div><div class="nominate-votes">${n.votes} vote${n.votes !== 1 ? 's' : ''}</div></div>`;
+    });
+  }
+
+  document.getElementById('statPageViews').textContent = data.stats.pageViews;
+  document.getElementById('statSponsors').textContent = data.stats.totalSponsors;
+  document.getElementById('statQRScans').textContent = data.stats.qrScans;
+  document.getElementById('statShares').textContent = data.stats.shares;
+  document.getElementById('statNominations').textContent = data.stats.totalNominations;
+  document.getElementById('statApplications').textContent = data.stats.applications;
+}
+
+function updateCountdown() {
+  const now = Date.now();
+  const diff = CAMPAIGN_END - now;
+  if (diff < 0) { document.getElementById('countdown').innerHTML = '<div class="countdown-item" style="border-color: var(--red);"><div class="countdown-num" style="color: var(--red);">ENDED</div></div>'; return; }
+  const d = Math.floor(diff / 86400000), h = Math.floor((diff % 86400000) / 3600000), m = Math.floor((diff % 3600000) / 60000), s = Math.floor((diff % 60000) / 1000);
+  document.getElementById('cdDays').textContent = d;
+  document.getElementById('cdHours').textContent = String(h).padStart(2, '0');
+  document.getElementById('cdMins').textContent = String(m).padStart(2, '0');
+  document.getElementById('cdSecs').textContent = String(s).padStart(2, '0');
+}
+
+function openSponsorModal(p) { selectedPosition = p; document.getElementById('modalPositionLabel').textContent = p.displayLabel; document.getElementById('modalPositionDesc').textContent = p.description || ''; document.getElementById('modalPositionPrice').textContent = formatINR(p.price); document.getElementById('sponsorModal').classList.add('active'); }
+function closeModal() { document.getElementById('sponsorModal').classList.remove('active'); selectedPosition = null; }
+function claimFirstAvailable(t) { const a = campaignData?.positions?.find(p => p.tier === t && p.isAvailable); if (a) openSponsorModal(a); }
+
+async function submitApplication(e) {
+  e.preventDefault();
+  if (isLoading) return;
+  isLoading = true;
+  const btn = document.getElementById('modalSubmitBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="loading"></span> Submitting...';
+  const fd = new FormData(e.target);
+  const body = { brandName:fd.get('brandName'), contactName:fd.get('contactName'), contactEmail:fd.get('contactEmail'), contactPhone:fd.get('contactPhone'), website:fd.get('website'), logoUrl:fd.get('logoUrl'), founderMessage:fd.get('founderMessage'), positionNumber:selectedPosition.positionNumber, tier:selectedPosition.tier, amount:selectedPosition.price };
+  try {
+    const res = await fetch(`${API_BASE}/submitSponsorApplication`, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body) });
+    const data = await res.json();
+    if (data.success) {
+      document.getElementById('modalBody').innerHTML = `<div class="modal-success"><div class="check">✅</div><h4>Application Submitted!</h4><p>You've claimed <strong>${data.position}</strong> for <strong>${formatINR(data.amount)}</strong></p><p style="margin-top: 16px; font-size: 14px;">Tracking ID: ${data.trackingId}</p><div style="text-align: left; margin-top: 20px; background: var(--surface-2); padding: 16px; border-radius: 10px;"><strong style="font-size: 14px; display: block; margin-bottom: 12px;">Next Steps:</strong>${data.nextSteps.map(s => `<p style="font-size: 14px; color: var(--text-muted); margin-bottom: 8px;">→ ${s}</p>`).join('')}</div></div>`;
+      showToast("Application submitted! We'll be in touch within 24 hours.");
+      setTimeout(() => loadCampaign(), 2000);
+    } else {
+      showToast(data.error || 'Failed to submit application');
+      btn.disabled = false;
+      btn.innerHTML = 'Submit Application';
+    }
+  } catch (err) {
+    showToast('Error submitting application. Please try again.');
+    btn.disabled = false;
+    btn.innerHTML = 'Submit Application';
+  }
+  isLoading = false;
+}
+
+async function submitNomination(e) {
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const body = { brandName:fd.get('brandName'), brandWebsite:fd.get('brandWebsite'), nominatorName:fd.get('nominatorName'), nominatorEmail:fd.get('nominatorEmail'), reason:fd.get('reason') };
+  try {
+    const res = await fetch(`${API_BASE}/nominateBrand`, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body) });
+    const data = await res.json();
+    if (data.success) { showToast(data.message); e.target.reset(); loadCampaign(); } else { showToast(data.error || 'Failed to nominate'); }
+  } catch (err) { showToast('Error nominating brand.'); }
+}
+
+async function trackPageView() { try { await fetch(`${API_BASE}/trackActivity`, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({activityType:'page_view', source:'website'}) }); } catch(e) {} }
+
+async function shareCampaign(platform) {
+  const url = window.location.href;
+  const text = 'Can 20 brands fund one MacBook? A 30-day public experiment. Watch it live:';
+  if (platform === 'twitter') {
+    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+    trackShare();
+  } else if (platform === 'linkedin') {
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+    trackShare();
+  } else if (platform === 'copy') {
+    navigator.clipboard.writeText(url).then(() => { showToast('Link copied to clipboard!'); trackShare(); });
+  }
+}
+
+async function trackShare() {
+  try { await fetch(`${API_BASE}/trackActivity`, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({activityType:'share', source:'website'}) }); } catch(e) {}
+}
+
+function toggleFAQ(el) { el.parentElement.classList.toggle('open'); }
+function showToast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 4000); }
+function scrollToPositions() { document.getElementById('positions').scrollIntoView({ behavior:'smooth' }); }
+
+trackPageView(); loadCampaign(); updateCountdown(); setInterval(updateCountdown, 1000); setInterval(loadCampaign, 30000);
+</script>
+</body>
+</html>
