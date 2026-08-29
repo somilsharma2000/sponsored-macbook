@@ -18,7 +18,7 @@ This is a template sponsor agreement for The Sponsored MacBook campaign. Replace
 
 **Tier:** [Crown / Founding / Standard / Community]
 
-**Amount:** ₹[Amount] (inclusive of GST)
+**Amount:** ₹[Amount]
 
 ---
 
@@ -44,7 +44,7 @@ The Sponsor will receive:
 
 1. The Sponsor agrees to pay the full amount within 7 days of receiving the invoice via Razorpay.
 2. Payment methods: UPI, credit/debit card, net banking.
-3. A GST invoice will be issued upon payment.
+3. An invoice will be issued upon payment.
 4. If payment is not received within 7 days, the position will be released back to the market.
 
 ### 4. REFUND POLICY
