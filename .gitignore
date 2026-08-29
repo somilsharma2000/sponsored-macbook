@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+deno_modules/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Secrets
+secrets.json
+credentials.json
+*.pem
+*.key
