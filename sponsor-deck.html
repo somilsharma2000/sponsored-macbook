@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Sponsored MacBook — Sponsor Deck</title>
+<style>
+:root { --bg:#0a0a0f; --surface:#12121a; --surface-2:#1a1a26; --border:#2a2a3a; --text:#f5f5f7; --text-muted:#8888a0; --primary:#6366f1; --gold:#fbbf24; --green:#22c55e; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; line-height:1.6; }
+.deck { max-width:900px; margin:0 auto; padding:40px 24px; }
+.page { background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:60px 48px; margin-bottom:24px; min-height:500px; display:flex; flex-direction:column; justify-content:center; }
+.page-num { font-size:13px; color:var(--text-muted); margin-bottom:16px; }
+.page-label { font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--primary); margin-bottom:12px; }
+.page-title { font-size:clamp(28px,4vw,42px); font-weight:900; letter-spacing:-1px; margin-bottom:20px; }
+.page p { font-size:17px; color:var(--text-muted); max-width:600px; margin-bottom:16px; }
+.page strong { color:var(--text); }
+h2 { font-size:24px; font-weight:800; margin-bottom:16px; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:20px; }
+.card { background:var(--surface-2); border:1px solid var(--border); border-radius:12px; padding:24px; }
+.card h3 { font-size:16px; font-weight:700; margin-bottom:12px; color:var(--primary); }
+.card p { font-size:14px; }
+.list { list-style:none; }
+.list li { padding:10px 0; padding-left:28px; position:relative; font-size:16px; color:var(--text-muted); }
+.list li::before { content:'→'; position:absolute; left:0; color:var(--primary); font-weight:700; }
+.pricing-row { display:flex; justify-content:space-between; align-items:center; padding:16px 0; border-bottom:1px solid var(--border); }
+.pricing-row:last-child { border-bottom:none; }
+.pricing-tier { font-weight:700; font-size:18px; }
+.pricing-price { font-size:20px; font-weight:900; color:var(--green); }
+.badge { display:inline-flex; align-items:center; gap:8px; background:var(--surface-2); border:1px solid var(--border); border-radius:100px; padding:6px 16px; font-size:13px; color:var(--text-muted); margin-bottom:24px; }
+.badge .dot { width:8px; height:8px; border-radius:50%; background:var(--green); animation:pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+.tour-list { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:20px; }
+.tour-item { background:var(--surface-2); border:1px solid var(--border); border-radius:10px; padding:16px; font-size:14px; color:var(--text-muted); }
+.tour-item strong { color:var(--text); display:block; margin-bottom:4px; }
+.contact-box { background:var(--surface-2); border:1px solid var(--primary); border-radius:16px; padding:32px; margin-top:24px; text-align:center; }
+.contact-box a { color:var(--primary); font-weight:700; text-decoration:none; }
+@media(max-width:768px){ .grid2,.tour-list{grid-template-columns:1fr} .page{padding:40px 24px} }
+</style>
+</head>
+<body>
+<div class="deck">
+
+<!-- PAGE 1: COVER -->
+<div class="page" style="text-align:center; align-items:center;">
+  <div class="badge"><span class="dot"></span> 30-Day Public Marketing Experiment</div>
+  <h1 style="font-size:clamp(36px,5vw,56px); font-weight:900; letter-spacing:-2px; margin-bottom:16px;">The Sponsored MacBook</h1>
+  <p style="font-size:20px; max-width:500px;">I don't have ₹6L for a MacBook. So I'm turning it into a billboard — and asking 20 brands to fund it.</p>
+  <div style="margin-top:32px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
+    <span style="background:var(--surface-2); border:1px solid var(--border); border-radius:8px; padding:6px 14px; font-size:13px; color:var(--text-muted);">30-day deadline</span>
+    <span style="background:var(--surface-2); border:1px solid var(--border); border-radius:8px; padding:6px 14px; font-size:13px; color:var(--text-muted);">100% refund guarantee</span>
+    <span style="background:var(--surface-2); border:1px solid var(--border); border-radius:8px; padding:6px 14px; font-size:13px; color:var(--text-muted);">Live tracking</span>
+    <span style="background:var(--surface-2); border:1px solid var(--border); border-radius:8px; padding:6px 14px; font-size:13px; color:var(--text-muted);">Published case study</span>
+  </div>
+</div>
+
+<!-- PAGE 2: THE EXPERIMENT -->
+<div class="page">
+  <div class="page-num">02</div>
+  <div class="page-label">The Experiment</div>
+  <div class="page-title">What is The Sponsored MacBook?</div>
+  <p>It's a <strong>30-day public marketing experiment</strong>. One MacBook. Twenty sponsor positions on the lid. Every position tracked with QR codes. Every interaction measured. Every milestone shared publicly.</p>
+  <p>The campaign ends with a <strong>live MacBook purchase and unboxing</strong> — followed by a <strong>12-month case study</strong> documenting the journey, the data, and the results.</p>
+  <p>If the campaign doesn't reach ₹6L in 30 days, <strong>every sponsor gets a full refund</strong>. The failure becomes part of the case study.</p>
+  <div class="grid2">
+    <div class="card"><h3>The Problem</h3><p>₹6L for a MacBook Pro 16" M5 Max. ₹0 in budget. Traditional options: save for months, take a loan, or give up.</p></div>
+    <div class="card"><h3>The Experiment</h3><p>Sell the MacBook as advertising real estate. 20 positions. 4 tiers. Real brands. Real money. Real tracking. Public story.</p></div>
+  </div>
+</div>
+
+<!-- PAGE 3: WHY IT MATTERS -->
+<div class="page">
+  <div class="page-num">03</div>
+  <div class="page-label">Why This Is Interesting</div>
+  <div class="page-title">Why would a brand participate?</div>
+  <p>Because <strong>"we sponsored a MacBook"</strong> is a more interesting story than <strong>"we ran another Meta ad."</strong></p>
+  <ul class="list">
+    <li><strong>It's a PR story.</strong> A marketing experiment that generates attention, content, and conversation.</li>
+    <li><strong>It's a content asset.</strong> Every sponsor gets social content featuring their brand on the MacBook.</li>
+    <li><strong>It's a case study.</strong> Every sponsor is featured in a published 12-month marketing case study.</li>
+    <li><strong>It's category exclusivity.</strong> One brand per category. If you claim "audio," no competitor joins.</li>
+    <li><strong>It's a public bet.</strong> The campaign succeeds or fails in public — either way, it's a story.</li>
+    <li><strong>It costs less than one week of Meta ads.</strong> ₹10K–₹1L for a permanent asset vs. ₹10K for a week of ads with no lasting value.</li>
+  </ul>
+</div>
+
+<!-- PAGE 4: WHAT SPONSORS RECEIVE -->
+<div class="page">
+  <div class="page-num">04</div>
+  <div class="page-label">Sponsor Deliverables</div>
+  <div class="page-title">What your brand gets</div>
+  <ul class="list">
+    <li><strong>Physical brand placement</strong> on the MacBook lid (vinyl skin, not sticker — premium quality)</li>
+    <li><strong>Unique QR code</strong> linking to your website, with live scan tracking</li>
+    <li><strong>Dedicated sponsor profile page</strong> on the campaign website</li>
+    <li><strong>Social content</strong> — posts on X and LinkedIn featuring your brand (quantity varies by tier)</li>
+    <li><strong>Category exclusivity</strong> — no competitor in your category can join</li>
+    <li><strong>MacBook Tour inclusion</strong> — the MacBook appears at startup events, co-working spaces, and tech meetups</li>
+    <li><strong>Case study feature</strong> — your brand in a published 12-month marketing case study</li>
+    <li><strong>Analytics dashboard</strong> — real-time QR scans, profile visits, and click-through data</li>
+    <li><strong>Sponsor agreement</strong> — formal contract with GST invoice</li>
+  </ul>
+</div>
+
+<!-- PAGE 5: DISTRIBUTION PLAN -->
+<div class="page">
+  <div class="page-num">05</div>
+  <div class="page-label">Distribution</div>
+  <div class="page-title">The MacBook Tour</div>
+  <p>The MacBook doesn't sit on a desk. It <strong>travels</strong>. Over 12 months, the Sponsored MacBook appears at:</p>
+  <div class="tour-list">
+    <div class="tour-item"><strong>Startup Events</strong>Bangalore Startup Week, TechSparks, Inc42 events</div>
+    <div class="tour-item"><strong>Co-working Spaces</strong>WeWork, BHIVE, 91Springboard, CoFYND</div>
+    <div class="tour-item"><strong>Tech Meetups</strong>React Bangalore, Python India, AI/ML meetups</div>
+    <div class="tour-item"><strong>College Campuses</strong>IITs, IIMs, BITS Pilani innovation labs</div>
+    <div class="tour-item"><strong>Conferences</strong>SaaSBoomi, India Product Summit, NASSCOM events</div>
+    <div class="tour-item"><strong>Creator Events</strong>Influencer meetups, podcast recordings, content collabs</div>
+  </div>
+  <p style="margin-top:20px;">Every tour stop is <strong>documented</strong> — photos, social posts, and check-ins. Sponsors see where their logo appeared and how many people saw it.</p>
+</div>
+
+<!-- PAGE 6: TRACKING & ANALYTICS -->
+<div class="page">
+  <div class="page-num">06</div>
+  <div class="page-label">Tracking & Analytics</div>
+  <div class="page-title">Measurable. Transparent. Real.</div>
+  <p>Every sponsor gets a <strong>unique QR code</strong> and <strong>unique tracking URL</strong>. All interactions are measured:</p>
+  <div class="grid2">
+    <div class="card"><h3>QR Scans</h3><p>Every time someone scans your QR code on the MacBook. Tracked in real-time.</p></div>
+    <div class="card"><h3>Profile Visits</h3><p>Every visit to your dedicated sponsor page on the campaign website.</p></div>
+    <div class="card"><h3>Click-throughs</h3><p>Every outbound click from your profile to your website.</p></div>
+    <div class="card"><h3>Tour Exposure</h3><p>Documentation of every event/location where the MacBook (and your logo) appeared.</p></div>
+  </div>
+  <p style="margin-top:20px;"><strong>We don't promise ROI.</strong> We promise <strong>independently measurable campaign exposure data</strong>. The value is the story, the content, and the data — not guaranteed impressions.</p>
+</div>
+
+<!-- PAGE 7: SPONSORSHIP OPPORTUNITIES -->
+<div class="page">
+  <div class="page-num">07</div>
+  <div class="page-label">Sponsorship Opportunities</div>
+  <div class="page-title">Positions & Pricing</div>
+  <p style="margin-bottom:24px;"><em>Prices are initial estimates. Final pricing will be validated through sponsor interviews before launch. Category exclusivity applies to all tiers.</em></p>
+  <div class="pricing-row"><div><div class="pricing-tier" style="color:var(--gold);">👑 Crown Partner</div><div style="font-size:13px;color:var(--text-muted);">1 position · Most visible spot · 1 category</div></div><div class="pricing-price">₹1,00,000</div></div>
+  <div class="pricing-row"><div><div class="pricing-tier" style="color:#a78bfa;">🏆 Founding Partner</div><div style="font-size:13px;color:var(--text-muted);">4 positions · Premium spot · Category protection</div></div><div class="pricing-price">₹50,000</div></div>
+  <div class="pricing-row"><div><div class="pricing-tier" style="color:#60a5fa;">⚡ Campaign Partner</div><div style="font-size:13px;color:var(--text-muted);">10 positions · Standard spot · QR + profile</div></div><div class="pricing-price">₹25,000</div></div>
+  <div class="pricing-row"><div><div class="pricing-tier" style="color:#34d399;">🧪 Experiment Partner</div><div style="font-size:13px;color:var(--text-muted);">5 positions · Small spot · Digital listing</div></div><div class="pricing-price">₹10,000</div></div>
+</div>
+
+<!-- PAGE 8: TERMS & CONTACT -->
+<div class="page">
+  <div class="page-num">08</div>
+  <div class="page-label">Terms & Timeline</div>
+  <div class="page-title">How it works</div>
+  <ul class="list">
+    <li><strong>Application:</strong> Submit interest via the campaign website or directly</li>
+    <li><strong>30-minute call:</strong> We discuss your brand, category, and goals</li>
+    <li><strong>Proposal:</strong> You receive a formal proposal with position, price, and deliverables</li>
+    <li><strong>Contract:</strong> Sponsor agreement is signed (e-signature)</li>
+    <li><strong>Payment:</strong> Invoice via Razorpay (UPI, card, net banking). GST invoice issued.</li>
+    <li><strong>Activation:</strong> Your position is locked, QR code generated, profile created</li>
+    <li><strong>Refund guarantee:</strong> If the campaign doesn't reach ₹6L in 30 days, 100% refund — no questions asked</li>
+  </ul>
+  <div class="contact-box">
+    <h3 style="margin-bottom:12px;">Interested?</h3>
+    <p style="margin-bottom:16px;">Let's talk. 15 minutes. No pressure.</p>
+    <p><a href="mailto:sponsor@sponsoredmacbook.com">sponsor@sponsoredmacbook.com</a></p>
+    <p style="margin-top:8px; font-size:14px; color:var(--text-muted);">Campaign website · LinkedIn · X · GitHub</p>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
